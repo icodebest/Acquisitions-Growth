@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ContactForm from "../components/ContactForm";
+import siteLogo from "../../Images/logo.png";
 
 export default function ContactPage() {
   return (
@@ -9,7 +10,7 @@ export default function ContactPage() {
       <nav style={{ position: "sticky", top: 0, zIndex: 200, background: "rgba(245,244,240,.97)", borderBottom: "1.5px solid #e8e8e4", backdropFilter: "blur(16px)", padding: "1rem 0" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 2rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <Link to="/" style={{ display: "inline-flex", alignItems: "center" }}>
-            <img className="nav-logo" src="/logo.png" alt="Acquisitions Growth" style={{ height: 72, width: "auto", display: "block" }} />
+            <img className="nav-logo" src={siteLogo} alt="Acquisitions Growth" style={{ height: 72, width: "auto", display: "block" }} />
           </Link>
           <div className="desk-nav" style={{ display: "flex", gap: "2.5rem", alignItems: "center" }}>
             <Link to="/#case-studies" className="navbtn">Results</Link>
@@ -30,7 +31,7 @@ export default function ContactPage() {
               <h1 style={{ fontFamily: "'Anton', sans-serif", fontSize: "clamp(4rem,10vw,10rem)", lineHeight: 0.87, letterSpacing: "-2px", textTransform: "uppercase", marginBottom: "1.5rem" }}>LET&apos;S<br />TALK<br /><span style={{ WebkitTextStroke: "3px #1a1a1a", color: "transparent" }}>GROWTH.</span></h1>
               <p style={{ fontSize: "1.05rem", color: "#555", lineHeight: 1.7, maxWidth: 400, marginBottom: "2.5rem" }}>Ready to grow your business? Our team is here to help you get more leads and customers.</p>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
-                {[{ icon: "call", value: "+1 (555) GROWTH-AG" }, { icon: "mail", value: "hello@acquisitionsgrowth.com" }, { icon: "schedule", value: "Response within 24 hours" }].map((item) => (
+                {[{ icon: "call", value: "+1 (555) GROWTH-AG" }, { icon: "mail", value: "admin@acquisitionsgrowth.com" }, { icon: "schedule", value: "Response within 24 hours" }].map((item) => (
                   <div className="info-row" key={item.icon}>
                     <div className="info-icon"><span style={{ fontFamily: "'Material Symbols Outlined'", fontSize: 18, fontStyle: "normal" }}>{item.icon}</span></div>
                     <span style={{ color: "#555", fontSize: "0.9rem" }}>{item.value}</span>
@@ -49,8 +50,8 @@ export default function ContactPage() {
 
       <footer style={{ background: "#1a1a1a", padding: "2rem", borderTop: "1.5px solid #2a2a2a" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
-          <img className="footer-logo" src="/logo.png" alt="Acquisitions Growth" style={{ height: 60, width: "auto", display: "block", filter: "brightness(0) invert(1)" }} />
-          <div style={{ color: "#444", fontSize: "0.78rem" }}>Copyright 2025 Acquisitions Growth Agency. All rights reserved.</div>
+          <img className="footer-logo" src={siteLogo} alt="Acquisitions Growth" style={{ height: 60, width: "auto", display: "block", filter: "brightness(0) invert(1)" }} />
+          <div style={{ color: "#444", fontSize: "0.78rem" }}>Copyright 2026 Acquisitions Growth. All rights reserved.</div>
         </div>
       </footer>
     </>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ContactForm from "../components/ContactForm";
+import siteLogo from "../../Images/logo.png";
 
 
 const services = [
@@ -13,7 +14,7 @@ const services = [
   [
     "02",
     "code",
-    "Website Design",
+    "Website Development",
     "We build fast, modern websites that look great and turn visitors into customers."
   ],
   [
@@ -87,7 +88,7 @@ export default function HomePage() {
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 200, background: scrollY > 60 ? "rgba(245,244,240,.97)" : "transparent", borderBottom: scrollY > 60 ? "1.5px solid #e8e8e4" : "1.5px solid transparent", backdropFilter: scrollY > 60 ? "blur(16px)" : "none", transition: "all .3s", padding: "1rem 0" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 2rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <Link to="/" style={{ display: "inline-flex", alignItems: "center" }}>
-            <img className="nav-logo" src="/logo.png" alt="Acquisitions Growth" style={{ height: 72, width: "auto", display: "block" }} />
+            <img className="nav-logo" src={siteLogo} alt="Acquisitions Growth" style={{ height: 72, width: "auto", display: "block" }} />
           </Link>
           <div className="desk-nav" style={{ display: "flex", gap: "2.5rem", alignItems: "center" }}>
             <button className="navbtn" onClick={() => scrollTo("case-studies")}>Results</button>
@@ -181,13 +182,13 @@ export default function HomePage() {
       <section id="contact" style={{ padding: "8rem 2rem", background: "#f5f4f0" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6rem", alignItems: "start" }}>
-            <div><div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.72rem", letterSpacing: "4px", color: "#aaa", textTransform: "uppercase", marginBottom: "0.75rem" }}>Get In Touch</div><h2 style={{ fontFamily: "'Anton', sans-serif", fontSize: "clamp(2.5rem,5vw,5rem)", letterSpacing: "-1px", textTransform: "uppercase", lineHeight: 0.9, marginBottom: "1.5rem" }}>LET&apos;S GROW<br />YOUR<br />BUSINESS</h2><p style={{ color: "#666", fontSize: "1rem", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: 380 }}>Book a strategy session and get a clear, step-by-step plan to reach your next growth goal.</p><div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>{[{ icon: "call", value: "+1 (555) GROWTH-AG" }, { icon: "mail", value: "hello@acquisitionsgrowth.com" }].map((item) => <div key={item.icon} style={{ display: "flex", alignItems: "center", gap: "1rem" }}><div style={{ width: 42, height: 42, background: "#fff", border: "1.5px solid #e8e8e4", borderRadius: 3, display: "flex", alignItems: "center", justifyContent: "center" }}><span style={{ fontFamily: "'Material Symbols Outlined'", fontSize: 18, fontStyle: "normal" }}>{item.icon}</span></div><span style={{ color: "#555", fontSize: "0.9rem" }}>{item.value}</span></div>)}</div></div>
+            <div><div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.72rem", letterSpacing: "4px", color: "#aaa", textTransform: "uppercase", marginBottom: "0.75rem" }}>Get In Touch</div><h2 style={{ fontFamily: "'Anton', sans-serif", fontSize: "clamp(2.5rem,5vw,5rem)", letterSpacing: "-1px", textTransform: "uppercase", lineHeight: 0.9, marginBottom: "1.5rem" }}>LET&apos;S GROW<br />YOUR<br />BUSINESS</h2><p style={{ color: "#666", fontSize: "1rem", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: 380 }}>Book a strategy session and get a clear, step-by-step plan to reach your next growth goal.</p><div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>{[{ icon: "call", value: "+1 (555) GROWTH-AG" }, { icon: "mail", value: "admin@acquisitionsgrowth.com" }].map((item) => <div key={item.icon} style={{ display: "flex", alignItems: "center", gap: "1rem" }}><div style={{ width: 42, height: 42, background: "#fff", border: "1.5px solid #e8e8e4", borderRadius: 3, display: "flex", alignItems: "center", justifyContent: "center" }}><span style={{ fontFamily: "'Material Symbols Outlined'", fontSize: 18, fontStyle: "normal" }}>{item.icon}</span></div><span style={{ color: "#555", fontSize: "0.9rem" }}>{item.value}</span></div>)}</div></div>
             <div style={{ background: "#fff", border: "1.5px solid #e8e8e4", borderRadius: 4, padding: "2.5rem" }}><h3 style={{ fontFamily: "'Anton', sans-serif", fontSize: "1.5rem", textTransform: "uppercase", marginBottom: "0.4rem" }}>Start Your Strategy Session</h3><p style={{ color: "#aaa", fontSize: "0.85rem", marginBottom: "2rem" }}>No sales reps. No runaround. Direct access to our senior growth team.</p><ContactForm submitLabel="Submit Inquiry" /></div>
           </div>
         </div>
       </section>
 
-      <footer style={{ background: "#1a1a1a", padding: "2rem", borderTop: "1.5px solid #2a2a2a" }}><div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}><img className="footer-logo" src="/logo.png" alt="Acquisitions Growth" style={{ height: 60, width: "auto", display: "block", filter: "brightness(0) invert(1)" }} /><div style={{ color: "#444", fontSize: "0.78rem" }}>Copyright 2025 Acquisitions Growth Agency. All rights reserved.</div></div></footer>
+      <footer style={{ background: "#1a1a1a", padding: "2rem", borderTop: "1.5px solid #2a2a2a" }}><div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}><img className="footer-logo" src={siteLogo} alt="Acquisitions Growth" style={{ height: 60, width: "auto", display: "block", filter: "brightness(0) invert(1)" }} /><div style={{ color: "#444", fontSize: "0.78rem" }}>Copyright 2026 Acquisitions Growth. All rights reserved.</div></div></footer>
     </>
   );
 }

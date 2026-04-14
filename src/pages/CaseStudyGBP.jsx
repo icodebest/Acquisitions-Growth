@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import businessProfileGraph from "../../Images/Business Profile interactions graph.jpeg";
 import day1ToDay30Image from "../../Images/Day1toDay30.jpg";
 import googleSearchConsoleImage from "../../Images/Goolglesearchconcole.jpg";
+import siteLogo from "../../Images/logo.png";
 
 export default function CaseStudyGBP() {
   const [scrollY, setScrollY] = useState(0);
@@ -33,7 +34,7 @@ export default function CaseStudyGBP() {
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 200, background: scrollY > 60 ? "rgba(245,244,240,.97)" : "transparent", borderBottom: scrollY > 60 ? "1.5px solid #e8e8e4" : "1.5px solid transparent", backdropFilter: scrollY > 60 ? "blur(16px)" : "none", transition: "all .3s", padding: "1rem 0" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 2rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <Link to="/" style={{ display: "inline-flex", alignItems: "center" }}>
-            <img className="nav-logo" src="/logo.png" alt="Acquisitions Growth" style={{ height: 72, width: "auto", display: "block" }} />
+            <img className="nav-logo" src={siteLogo} alt="Acquisitions Growth" style={{ height: 72, width: "auto", display: "block" }} />
           </Link>
           <div className="desk-nav" style={{ display: "flex", gap: "2.5rem", alignItems: "center" }}>
             <Link className="navbtn" to="/">Home</Link>
@@ -315,8 +316,8 @@ export default function CaseStudyGBP() {
       {/* Footer */}
       <footer style={{ background: "#1a1a1a", padding: "2rem", borderTop: "1.5px solid #2a2a2a" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
-          <img src="/logo.png" alt="Acquisitions Growth" style={{ height: 60, width: "auto", display: "block", filter: "brightness(0) invert(1)" }} />
-          <div style={{ color: "#444", fontSize: "0.78rem" }}>Copyright 2025 Acquisitions Growth Agency. All rights reserved.</div>
+          <img src={siteLogo} alt="Acquisitions Growth" style={{ height: 60, width: "auto", display: "block", filter: "brightness(0) invert(1)" }} />
+          <div style={{ color: "#444", fontSize: "0.78rem" }}>Copyright 2026 Acquisitions Growth. All rights reserved.</div>
         </div>
       </footer>
     </>
